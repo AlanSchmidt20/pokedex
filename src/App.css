@@ -1,0 +1,401 @@
+* {
+  margin: 0px;
+}
+
+.App {
+  margin-bottom: 10%;
+}
+
+nav {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar-image {
+  width: 160px;
+}
+
+.searchbar-container {
+  display: flex;
+  margin: 0px 10px;
+  padding: 0;
+  flex: 1;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.searchbar {
+  background: white;
+  padding-right: 20px;
+  flex: 1;
+  display: contents;
+}
+
+.searchbar input {
+  padding: 10px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  border: none;
+  width: 70%;
+}
+
+.searchbar input:focus {
+  outline: none;
+}
+
+.searchbar-btn button {
+  background-color: #363636;
+  border: none;
+  border-radius: 10px;
+  height: 100%;
+  color: white;
+  padding: 10px 12px;
+  margin-left: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.pokedex-grid {
+  grid-gap: 18px;
+  display: grid;
+  padding: 0 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 992px) {
+  .pokedex-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pokedex-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.pokemon-card {
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.pokemon-card-container:hover {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.pokemon-img-container {
+  padding: 0 5px;
+}
+
+.pokemon-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-top h3 {
+  text-transform: capitalize;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px;
+  flex: 1;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pokemon-type {
+  display: flex;
+  width: 30%;
+}
+
+.pokemon-type-text {
+  margin-right: 10px;
+  text-transform: capitalize;
+  border-radius: 19px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* POKEMON TYPE CLASSES */
+
+.isGrass {
+  background-color: rgba(
+    110,
+    190,
+    84,
+    0.8
+  ); /* A slightly lighter shade of green with 80% opacity */
+}
+
+.isFire {
+  background-color: rgba(
+    255,
+    90,
+    0,
+    0.8
+  ); /* A fiery orange-red color with 80% opacity */
+}
+
+.isWater {
+  background-color: rgba(86, 148, 221, 0.8); /* A blue color with 80% opacity */
+}
+
+.isBug {
+  background-color: rgba(
+    178,
+    187,
+    34,
+    0.8
+  ); /* A yellow-green color with 80% opacity */
+}
+
+.isNormal {
+  background-color: rgba(
+    177,
+    166,
+    154,
+    0.8
+  ); /* A light gray color with 80% opacity */
+}
+
+.isFlying {
+  background-color: rgba(
+    144,
+    201,
+    236,
+    0.8
+  ); /* A light blue color with 80% opacity */
+}
+
+.isPoison {
+  background-color: rgba(
+    162,
+    0,
+    204,
+    0.8
+  ); /* A purple color with 80% opacity */
+}
+
+.isElectric {
+  background-color: rgba(
+    255,
+    216,
+    56,
+    0.8
+  ); /* A yellow color with 80% opacity */
+}
+
+.isGround {
+  background-color: rgba(
+    237,
+    205,
+    146,
+    0.8
+  ); /* A beige color with 80% opacity */
+}
+
+.isFairy {
+  background-color: rgba(
+    255,
+    192,
+    203,
+    0.8
+  ); /* A light pink color with 80% opacity */
+}
+
+.isFighting {
+  background-color: rgba(
+    214,
+    23,
+    25,
+    0.8
+  ); /* A dark red color with 80% opacity */
+}
+
+.isPsychic {
+  background-color: rgba(
+    254,
+    121,
+    171,
+    0.8
+  ); /* A light pink color with 80% opacity */
+}
+
+.isRock {
+  background-color: rgba(
+    168,
+    147,
+    100,
+    0.8
+  ); /* A light brown color with 80% opacity */
+}
+
+.isSteel {
+  background-color: rgba(
+    142,
+    142,
+    147,
+    0.8
+  ); /* A light gray color with 80% opacity */
+}
+
+.isIce {
+  background-color: rgba(
+    152,
+    245,
+    255,
+    0.8
+  ); /* A light blue color with 80% opacity */
+}
+
+.isGhost {
+  background-color: rgba(
+    110,
+    86,
+    155,
+    0.8
+  ); /* A dark purple color with 80% opacity */
+}
+
+.isDragon {
+  background-color: rgba(
+    143,
+    75,
+    255,
+    0.8
+  ); /* A dark purple color with 80% opacity */
+}
+
+.isDark {
+  background-color: rgba(
+    59,
+    47,
+    54,
+    0.8
+  ); /* A dark gray color with 80% opacity */
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pagination-btn {
+  background-color: #363636;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin: 0px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+}
+
+.expand-icon {
+  font-size: 10px !important;
+}
+
+.pokemon-heeart-btn {
+  border: none;
+  background-color: #f0f0f0;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.not-found-text {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 20px;
+}
+
+.pokemonInformation-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemonInformation-title {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pokemonInformation-img {
+  width: 40%;
+  margin: 0;
+  padding: 0;
+}
+
+.pokemonInformation-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.pokemonInformation-stats-container {
+  display: flex;
+  align-items: center;
+}
+
+.pokemonInformation-stats {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.baseStats-container,
+.weight-container,
+.height-container,
+.abilities-container,
+.type-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1% 0;
+  align-items: center;
+  text-align: left;
+}
+.stats-name {
+  text-transform: capitalize;
+}
+
+.stats {
+  margin: 0 2%;
+  text-transform: capitalize;
+}
